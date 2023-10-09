@@ -1,0 +1,180 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "HankenGrotesk"; /* フォント名 */
+  src: url("../fonts/static/HankenGrotesk-Bold.ttf") format("woff");
+  src: url("../fonts/static/HankenGrotesk-ExtraBold.ttf") format("woff");
+  src: url("../fonts/static/HankenGrotesk-Medium.ttf") format("woff");
+}
+body {
+  background: #282a34;
+}
+
+.popup__base {
+  width: 100%;
+  max-width: 1200px;
+  padding: 150px 0;
+  background: #fdfdfe;
+  margin: 60px auto;
+}
+.popup__base .object__container {
+  width: 100%;
+  max-width: 607px;
+  margin: 0 auto;
+  display: flex;
+  box-shadow: 8px 10px 30px 0px rgba(112, 143, 192, 0.2);
+  overflow: hidden;
+  border-radius: 40px;
+}
+.popup__base .object__inner {
+  text-align: center;
+  width: 50%;
+  padding: 35px 0 40px;
+  border-radius: 40px;
+}
+.popup__base .object__inner.bg__blue {
+  background-image: linear-gradient(180deg, rgb(62, 6, 248) 10%, rgb(55, 41, 240) 76%, rgb(53, 29, 234) 90%);
+}
+.popup__base .object__inner.bg__white {
+  padding: 30px 35px;
+  background: #fff;
+}
+.popup__base .object__inner.bg__white .object__ttl {
+  font-family: "HankenGrotesk";
+  text-align: left;
+  font-size: 20px;
+  font-weight: 700;
+  color: #020525;
+}
+.popup__base .object__inner.bg__white .score__labels {
+  font-family: "HankenGrotesk";
+  margin: 0 0 40px;
+}
+.popup__base .object__inner.bg__white .score__label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 8px 15px;
+  border-radius: 7px;
+}
+.popup__base .object__inner.bg__white .score__label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 18px;
+  height: 18px;
+}
+.popup__base .object__inner.bg__white .score__label:not(:last-child) {
+  margin: 0 0 15px;
+}
+.popup__base .object__inner.bg__white .score__label.red {
+  background: rgb(255, 237, 237);
+  color: #f84c4c;
+}
+.popup__base .object__inner.bg__white .score__label.red::before {
+  content: "";
+  background: url(../img/icon-reaction.svg) no-repeat 50% 50%/cover;
+}
+.popup__base .object__inner.bg__white .score__label.yellow {
+  background: rgb(255, 254, 227);
+  color: #ffc848;
+}
+.popup__base .object__inner.bg__white .score__label.yellow::before {
+  content: "";
+  background: url(../img/icon-memory.svg) no-repeat 50% 50%/cover;
+}
+.popup__base .object__inner.bg__white .score__label.green {
+  background: rgb(234, 250, 245);
+  color: #16cb7d;
+}
+.popup__base .object__inner.bg__white .score__label.green::before {
+  content: "";
+  background: url(../img/icon-verbal.svg) no-repeat 50% 50%/cover;
+}
+.popup__base .object__inner.bg__white .score__label.blue {
+  background: rgb(239, 239, 249);
+  color: #172083;
+}
+.popup__base .object__inner.bg__white .score__label.blue::before {
+  content: "";
+  background: url(../img/icon-visual.svg) no-repeat 50% 50%/cover;
+}
+.popup__base .object__inner.bg__white .score__kind {
+  position: relative;
+  padding: 0 0 0 30px;
+}
+.popup__base .object__inner.bg__white .score__numerator {
+  position: relative;
+  font-family: "HankenGrotesk";
+  font-weight: 700;
+  color: #020525;
+  padding: 0 50px 0 0;
+}
+.popup__base .object__inner.bg__white .score__numerator::after {
+  content: "/ 100";
+  position: absolute;
+  top: 0px;
+  left: 25px;
+  z-index: 10;
+  color: #6c6f91;
+}
+.popup__base .object__inner .circle__item {
+  width: 167px;
+  height: 167px;
+  border-radius: 50%;
+  background-image: linear-gradient(180deg, rgb(21, 9, 168) 19%, rgb(53, 57, 246) 76%), linear-gradient(180deg, rgb(67, 12, 247) 10%, rgb(55, 35, 247) 90%);
+  margin: 0 auto 30px;
+  padding: 50px 0 0;
+}
+.popup__base .object__inner .circle__item .score__numerator {
+  font-family: "HankenGrotesk";
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1em;
+  padding: 0 0 10px;
+  color: #fff;
+}
+.popup__base .object__inner .circle__item .score__denominator {
+  font-family: "HankenGrotesk";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1em;
+  padding: 0 0 15px;
+  color: #8d8d8d;
+}
+.popup__base .object__inner .valuer__ttl {
+  font-family: "HankenGrotesk";
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1em;
+  color: #fff;
+  padding: 0 0 20px;
+}
+.popup__base .object__inner .valuer__txt {
+  font-family: "HankenGrotesk";
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.4em;
+  color: #999;
+}
+.popup__base .object__inner .continue__btn {
+  display: block;
+  border-radius: 50px;
+  background: #383c5e;
+  color: #f2f1f1;
+  padding: 16px 0;
+}
+.popup__base .object__ttl {
+  font-family: "HankenGrotesk";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1em;
+  color: #999;
+  padding: 0 0 30px;
+}/*# sourceMappingURL=style.css.map */
